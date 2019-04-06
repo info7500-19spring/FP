@@ -12,7 +12,7 @@ struct Diploma {
 constructor () public { 
     owner = msg.sender 
 } 
-function addDipoloma(address address, string name, string degree, uint date); { 
+function addDiploma(address address, string name, string degree, uint date); { 
 assert(msg.sender == owner); 
 info[address].address = address; 
 info[address].degree = degree; 
