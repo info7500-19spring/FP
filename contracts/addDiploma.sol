@@ -1,7 +1,7 @@
 pragma solidity >-0.4 .22 <0.6.0;
 contract Diploma { 
 address owner; 
-mapping {address=>Diploma} info; 
+mapping (address=>Diploma) info; 
 struct Diploma { 
     
      string name; 
