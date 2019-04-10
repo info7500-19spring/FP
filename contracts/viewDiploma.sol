@@ -22,7 +22,8 @@ contract viewDiploma {
     // Input is the address of the desired student and the id of the university
     function getDiploma(address addr, uint univeristyID) public returns(string name, address studentAddress, string degree, uint date) {
         // TODO Error checking here
-        Diploma diplomaContract = Diploma(addr);
+        address universityAddress = trustedUniversities[universityID];
+        Diploma diplomaContract = Diploma(universityAddress);
         returns diplomaContract.info[addr];
     }
 
