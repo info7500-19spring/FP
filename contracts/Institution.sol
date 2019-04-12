@@ -29,7 +29,7 @@ contract Institution {
     }
 
     // View diploma of given person
-    function viewDiploma(address _address) public view returns(string memory, address, string memory, uint) {
+    function viewDiploma(address _address) public view returns(string memory, address studentaddress, string memory, uint date) {
         Diploma storage diploma = info[_address];
         return (diploma.name, diploma.studentAddress, diploma.degree, diploma.date);
     }
