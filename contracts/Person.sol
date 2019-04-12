@@ -8,7 +8,7 @@ contract Person {
         address personAddress; 
         string degree;
         uint lastUpdate;
-        string email 		
+        string email; 		
     } 
 
     address owner;
@@ -21,20 +21,20 @@ contract Person {
     } 
 
     // Add a new Person
-    function addPerson(address _address, string memory _name, string memory _degree, uint _lastUpdate, string _email) public { 
+    function addPerson(address _address, string memory _name, string memory _degree, uint _lastUpdate, string memory _email) public { 
         require(msg.sender == owner); 
-        personList[_address].PersonAddress = _address; 
+        personList[_address].personAddress = _address; 
         personList[_address].degree = _degree; 
-        personList[_address].lastUpdate = __lastUpdate; 
+        personList[_address].lastUpdate = _lastUpdate; 
         personList[_address].name = _name;
         personList[_address].email = _email;		
     }
 
     // View person
     function viewPerson(address _address) public view returns(
-	       string memory, address address, 
+	       string memory, address personaddress, 
 		   string memory degree, uint lastUpdate, 
-		   string email
+		   string memory email
     ) {
         Person storage person = personList[_address];
         return (
