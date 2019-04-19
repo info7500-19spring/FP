@@ -4,23 +4,23 @@ contract Platform {
 
     // Fields of a diploma
     struct Diploma {  
-        address studentAddress; 
         string degree;
         uint date; 
     } 
 
     // Fields of a Person
     struct Person {  
-        string name; 
-        address personAddress; 
+        string name;
+        string email; 
         Diploma degree;
-        uint lastUpdate;
-        string email; 		
+        uint lastUpdate;		
     } 
 
-    // Person => Diploma of Person
-    mapping(address => Diploma) diplomaList;
-    
+    // University Address => Student Address => Diploma
+    mapping(address => mapping(address => Diploma)) universityMapping;
+
+    // Person Address => Person Profile
+    mapping(address => Person) personMapping;
 
     constructor () public { 
        
@@ -28,29 +28,31 @@ contract Platform {
 
     // Add a new Diploma
     function addDipoloma(address _studentAddress, string memory _degree, uint _date) public {
-        Diploma newDiploma = Diploma(_studentAddress,_degree,_date); 
-        diplomaList[msg.sender]
+        Diploma newDiploma = Diploma(_degree,_date); 
+        universityToMapping[msg.sender][_studentAddress] = newDiploma;
+        personMapping[_studentAddress].degree = newDiploma;
+        personMapping[_studentAddress].lastUpdate = now;
     }
 
-    // View diploma of given person
-    function viewDiploma(address _studentAddress, address _universityAddress) public view returns(string memory, address studentaddress, string memory, uint date) {
-        Diploma storage diploma = info[_address];
-        return (diploma.name, diploma.studentAddress, diploma.degree, diploma.date);
+    // View diploma of given person at an institution
+    function viewDiploma(address _studentAddress, address _universityAddress) public view returns(string memory,=uint) {
+        Diploma storage diploma = universityToMapping[_universityAddress][_studentAddress];
+        return (diploma.degree, diploma.date);
     }
 
-    // Returns the diploma of the person at the university
-    function getDiploma(address _addr, uint _universityID) public view returns(string memory, address, string memory, uint) {
-        address universityAddress = trustedUniversities[_universityID];
-        require(universityAddress!=address(0)); // Checks if university address exist
-        Institution institutionContract = Institution(universityAddress);
-        return institutionContract.viewDiploma(_addr);
+    // Add a new Person Profile
+    function updatePerson(string memory _name, string memory _email) {
+        personMapping[msg.sender].name = _name;
+        personMapping[msg.sender].email = _email;
+        personMapping[msg.sender].lastUpdate = now;
     }
 
-    // Adds or modify a university's address
-    function addUniversity(address _universityAddress, uint _universityID) public {
-        require(msg.sender == owner);
-        trustedUniversities[_universityID] = _universityAddress;
+    // View the profile of a person
+    function viewPerson(string _personAddress) public returns(string memory,string memory, string memory, address, uint, uint) {
+        Person person = personMapping[_personAddress];
+        return(person.name,person.email,person.degree.degree,person.degree.date,person.lastUpdate);
     }
+
 }
 
     
