@@ -1,0 +1,4295 @@
+{
+  "contractName": "Platform",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "signature": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_studentAddress",
+          "type": "address"
+        },
+        {
+          "name": "_degree",
+          "type": "string"
+        },
+        {
+          "name": "_date",
+          "type": "uint256"
+        }
+      ],
+      "name": "addDipoloma",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x0afb2ae4"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_studentAddress",
+          "type": "address"
+        },
+        {
+          "name": "_universityAddress",
+          "type": "address"
+        }
+      ],
+      "name": "viewDiploma",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x29ff8909"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_email",
+          "type": "string"
+        }
+      ],
+      "name": "updatePerson",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x463b0328"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_personAddress",
+          "type": "address"
+        }
+      ],
+      "name": "viewPerson",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x44d08d75"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_studentAddress\",\"type\":\"address\"},{\"name\":\"_degree\",\"type\":\"string\"},{\"name\":\"_date\",\"type\":\"uint256\"}],\"name\":\"addDipoloma\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_studentAddress\",\"type\":\"address\"},{\"name\":\"_universityAddress\",\"type\":\"address\"}],\"name\":\"viewDiploma\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_personAddress\",\"type\":\"address\"}],\"name\":\"viewPerson\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_name\",\"type\":\"string\"},{\"name\":\"_email\",\"type\":\"string\"}],\"name\":\"updatePerson\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/vagrant/host/FP/contracts/Platform.sol\":\"Platform\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/vagrant/host/FP/contracts/Platform.sol\":{\"keccak256\":\"0xa2afab71715fa5d98ecf87b0e223d9a2cc4a5fe92e9fdb81dd724f4578a8b7ec\",\"urls\":[\"bzzr://e8d10a0039d0ac0a530e886462d367da6a6dc7dba987f08fa98a87e1050d5bc8\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610cbe806100206000396000f3fe608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630afb2ae41461006757806329ff89091461015957806344d08d751461024a578063463b0328146103fa575b600080fd5b34801561007357600080fd5b506101576004803603606081101561008a57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001906401000000008111156100c757600080fd5b8201836020820111156100d957600080fd5b803590602001918460018302840111640100000000831117156100fb57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190505050610559565b005b34801561016557600080fd5b506101c86004803603604081101561017c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106d8565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b8381101561020e5780820151818401526020810190506101f3565b50505050905090810190601f16801561023b5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b34801561025657600080fd5b506102996004803603602081101561026d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061080b565b60405180806020018060200180602001868152602001858152602001848103845289818151815260200191508051906020019080838360005b838110156102ed5780820151818401526020810190506102d2565b50505050905090810190601f16801561031a5780820380516001836020036101000a031916815260200191505b50848103835288818151815260200191508051906020019080838360005b83811015610353578082015181840152602081019050610338565b50505050905090810190601f1680156103805780820380516001836020036101000a031916815260200191505b50848103825287818151815260200191508051906020019080838360005b838110156103b957808201518184015260208101905061039e565b50505050905090810190601f1680156103e65780820380516001836020036101000a031916815260200191505b509850505050505050505060405180910390f35b34801561040657600080fd5b506105576004803603604081101561041d57600080fd5b810190808035906020019064010000000081111561043a57600080fd5b82018360208201111561044c57600080fd5b8035906020019184600183028401116401000000008311171561046e57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803590602001906401000000008111156104d157600080fd5b8201836020820111156104e357600080fd5b8035906020019184600183028401116401000000008311171561050557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610a5a565b005b610561610b53565b6040805190810160405280848152602001838152509050806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019080519060200190610610929190610b6d565b506020820151816001015590505080600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600201600082015181600001908051906020019061067d929190610b6d565b506020820151816001015590505042600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206004018190555050505050565b60606000806000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050806000018160010154818054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107f85780601f106107cd576101008083540402835291602001916107f8565b820191906000526020600020905b8154815290600101906020018083116107db57829003601f168201915b5050505050915092509250509250929050565b60608060606000806000600160008873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905080600001816001018260020160000183600201600101548460040154848054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109075780601f106108dc57610100808354040283529160200191610907565b820191906000526020600020905b8154815290600101906020018083116108ea57829003601f168201915b50505050509450838054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109a35780601f10610978576101008083540402835291602001916109a3565b820191906000526020600020905b81548152906001019060200180831161098657829003601f168201915b50505050509350828054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610a3f5780601f10610a1457610100808354040283529160200191610a3f565b820191906000526020600020905b815481529060010190602001808311610a2257829003601f168201915b50505050509250955095509550955095505091939590929450565b81600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000019080519060200190610ab0929190610bed565b5080600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001019080519060200190610b07929190610bed565b5042600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600401819055505050565b604080519081016040528060608152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610bae57805160ff1916838001178555610bdc565b82800160010185558215610bdc579182015b82811115610bdb578251825591602001919060010190610bc0565b5b509050610be99190610c6d565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610c2e57805160ff1916838001178555610c5c565b82800160010185558215610c5c579182015b82811115610c5b578251825591602001919060010190610c40565b5b509050610c699190610c6d565b5090565b610c8f91905b80821115610c8b576000816000905550600101610c73565b5090565b9056fea165627a7a72305820b09c8c109f842644f5b9ef32e4825d6fc841a33982bf0e25d7495e00ac77d1930029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630afb2ae41461006757806329ff89091461015957806344d08d751461024a578063463b0328146103fa575b600080fd5b34801561007357600080fd5b506101576004803603606081101561008a57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001906401000000008111156100c757600080fd5b8201836020820111156100d957600080fd5b803590602001918460018302840111640100000000831117156100fb57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190505050610559565b005b34801561016557600080fd5b506101c86004803603604081101561017c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106d8565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b8381101561020e5780820151818401526020810190506101f3565b50505050905090810190601f16801561023b5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b34801561025657600080fd5b506102996004803603602081101561026d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061080b565b60405180806020018060200180602001868152602001858152602001848103845289818151815260200191508051906020019080838360005b838110156102ed5780820151818401526020810190506102d2565b50505050905090810190601f16801561031a5780820380516001836020036101000a031916815260200191505b50848103835288818151815260200191508051906020019080838360005b83811015610353578082015181840152602081019050610338565b50505050905090810190601f1680156103805780820380516001836020036101000a031916815260200191505b50848103825287818151815260200191508051906020019080838360005b838110156103b957808201518184015260208101905061039e565b50505050905090810190601f1680156103e65780820380516001836020036101000a031916815260200191505b509850505050505050505060405180910390f35b34801561040657600080fd5b506105576004803603604081101561041d57600080fd5b810190808035906020019064010000000081111561043a57600080fd5b82018360208201111561044c57600080fd5b8035906020019184600183028401116401000000008311171561046e57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803590602001906401000000008111156104d157600080fd5b8201836020820111156104e357600080fd5b8035906020019184600183028401116401000000008311171561050557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610a5a565b005b610561610b53565b6040805190810160405280848152602001838152509050806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019080519060200190610610929190610b6d565b506020820151816001015590505080600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600201600082015181600001908051906020019061067d929190610b6d565b506020820151816001015590505042600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206004018190555050505050565b60606000806000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050806000018160010154818054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107f85780601f106107cd576101008083540402835291602001916107f8565b820191906000526020600020905b8154815290600101906020018083116107db57829003601f168201915b5050505050915092509250509250929050565b60608060606000806000600160008873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905080600001816001018260020160000183600201600101548460040154848054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109075780601f106108dc57610100808354040283529160200191610907565b820191906000526020600020905b8154815290600101906020018083116108ea57829003601f168201915b50505050509450838054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109a35780601f10610978576101008083540402835291602001916109a3565b820191906000526020600020905b81548152906001019060200180831161098657829003601f168201915b50505050509350828054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610a3f5780601f10610a1457610100808354040283529160200191610a3f565b820191906000526020600020905b815481529060010190602001808311610a2257829003601f168201915b50505050509250955095509550955095505091939590929450565b81600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000019080519060200190610ab0929190610bed565b5080600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001019080519060200190610b07929190610bed565b5042600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600401819055505050565b604080519081016040528060608152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610bae57805160ff1916838001178555610bdc565b82800160010185558215610bdc579182015b82811115610bdb578251825591602001919060010190610bc0565b5b509050610be99190610c6d565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610c2e57805160ff1916838001178555610c5c565b82800160010185558215610c5c579182015b82811115610c5b578251825591602001919060010190610c40565b5b509050610c699190610c6d565b5090565b610c8f91905b80821115610c8b576000816000905550600101610c73565b5090565b9056fea165627a7a72305820b09c8c109f842644f5b9ef32e4825d6fc841a33982bf0e25d7495e00ac77d1930029",
+  "sourceMap": "25:1823:4:-;;;517:38;8:9:-1;5:2;;;30:1;27;20:12;5:2;517:38:4;25:1823;;;;;;",
+  "deployedSourceMap": "25:1823:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;587:342;;8:9:-1;5:2;;;30:1;27;20:12;5:2;587:342:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;587:342:4;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;587:342:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;587:342:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;587:342:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;587:342:4;;;;;;;;;;;;;;;;;;;;;;;;;;;989:259;;8:9:-1;5:2;;;30:1;27;20:12;5:2;989:259:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;989:259:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;989:259:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1556:289;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1556:289:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1556:289:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1556:289:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1556:289:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1556:289:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1286:228;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1286:228:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1286:228:4;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;1286:228:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;1286:228:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;1286:228:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;1286:228:4;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;1286:228:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;1286:228:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;1286:228:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;1286:228:4;;;;;;;;;;;;;;;;;;587:342;685:25;;:::i;:::-;713:22;;;;;;;;;721:7;713:22;;;;729:5;713:22;;;685:50;;795:10;746:17;:29;764:10;746:29;;;;;;;;;;;;;;;:46;776:15;746:46;;;;;;;;;;;;;;;:59;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;855:10;815:13;:30;829:15;815:30;;;;;;;;;;;;;;;:37;;:50;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;919:3;875:13;:30;889:15;875:30;;;;;;;;;;;;;;;:41;;:47;;;;587:342;;;;:::o;989:259::-;1083:13;1098:4;1114:23;1140:17;:37;1158:18;1140:37;;;;;;;;;;;;;;;:54;1178:15;1140:54;;;;;;;;;;;;;;;1114:80;;1212:7;:14;;1228:7;:12;;;1204:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;989:259;;;;;:::o;1556:289::-;1620:13;1634;1649;1663:4;1669;1685:21;1709:13;:29;1723:14;1709:29;;;;;;;;;;;;;;;1685:53;;1755:6;:11;;1767:6;:12;;1780:6;:13;;:20;;1801:6;:13;;:18;;;1820:6;:17;;;1748:90;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1556:289;;;;;;;:::o;1286:228::-;1400:5;1367:13;:25;1381:10;1367:25;;;;;;;;;;;;;;;:30;;:38;;;;;;;;;;;;:::i;:::-;;1449:6;1415:13;:25;1429:10;1415:25;;;;;;;;;;;;;;;:31;;:40;;;;;;;;;;;;:::i;:::-;;1504:3;1465:13;:25;1479:10;1465:25;;;;;;;;;;;;;;;:36;;:42;;;;1286:228;;:::o;25:1823::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract Platform {\n\n    // Fields of a diploma\n    struct Diploma {  \n        string degree;\n        uint date; \n    } \n\n    // Fields of a Person\n    struct Person {  \n        string name;\n        string email; \n        Diploma degree;\n        uint lastUpdate;\t\t\n    } \n\n    // University Address => Student Address => Diploma\n    mapping(address => mapping(address => Diploma)) universityMapping;\n\n    // Person Address => Person Profile\n    mapping(address => Person) personMapping;\n\n    constructor () public { \n       \n    } \n\n    // Add a new Diploma\n    function addDipoloma(address _studentAddress, string memory _degree, uint _date) public {\n        Diploma memory newDiploma = Diploma(_degree,_date); \n        universityMapping[msg.sender][_studentAddress] = newDiploma;\n        personMapping[_studentAddress].degree = newDiploma;\n        personMapping[_studentAddress].lastUpdate = now;\n    }\n\n    // View diploma of given person at an institution\n    function viewDiploma(address _studentAddress, address _universityAddress) public view returns(string memory, uint) {\n        Diploma storage diploma = universityMapping[_universityAddress][_studentAddress];\n        return (diploma.degree, diploma.date);\n    }\n\n    // Add a new Person Profile\n    function updatePerson(string memory _name, string memory _email) public{\n        personMapping[msg.sender].name = _name;\n        personMapping[msg.sender].email = _email;\n        personMapping[msg.sender].lastUpdate = now;\n    }\n\n    // View the profile of a person\n    function viewPerson(address _personAddress) public view returns(string memory,string memory, string memory,uint, uint) {\n        Person storage person = personMapping[_personAddress];\n        return(person.name,person.email,person.degree.degree,person.degree.date,person.lastUpdate);\n    }\n\n}\n\n    \n    \n",
+  "sourcePath": "/home/vagrant/host/FP/contracts/Platform.sol",
+  "ast": {
+    "absolutePath": "/home/vagrant/host/FP/contracts/Platform.sol",
+    "exportedSymbols": {
+      "Platform": [
+        525
+      ]
+    },
+    "id": 526,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 362,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 525,
+        "linearizedBaseContracts": [
+          525
+        ],
+        "name": "Platform",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Platform.Diploma",
+            "id": 367,
+            "members": [
+              {
+                "constant": false,
+                "id": 364,
+                "name": "degree",
+                "nodeType": "VariableDeclaration",
+                "scope": 367,
+                "src": "104:13:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 363,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "104:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 366,
+                "name": "date",
+                "nodeType": "VariableDeclaration",
+                "scope": 367,
+                "src": "127:9:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 365,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "127:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Diploma",
+            "nodeType": "StructDefinition",
+            "scope": 525,
+            "src": "77:67:4",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Platform.Person",
+            "id": 376,
+            "members": [
+              {
+                "constant": false,
+                "id": 369,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 376,
+                "src": "203:11:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 368,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "203:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 371,
+                "name": "email",
+                "nodeType": "VariableDeclaration",
+                "scope": 376,
+                "src": "224:12:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 370,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "224:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 373,
+                "name": "degree",
+                "nodeType": "VariableDeclaration",
+                "scope": 376,
+                "src": "247:14:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                  "typeString": "struct Platform.Diploma"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 372,
+                  "name": "Diploma",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 367,
+                  "src": "247:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                    "typeString": "struct Platform.Diploma"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 375,
+                "name": "lastUpdate",
+                "nodeType": "VariableDeclaration",
+                "scope": 376,
+                "src": "271:15:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 374,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "271:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Person",
+            "nodeType": "StructDefinition",
+            "scope": 525,
+            "src": "177:118:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 382,
+            "name": "universityMapping",
+            "nodeType": "VariableDeclaration",
+            "scope": 525,
+            "src": "358:65:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$_$",
+              "typeString": "mapping(address => mapping(address => struct Platform.Diploma))"
+            },
+            "typeName": {
+              "id": 381,
+              "keyType": {
+                "id": 377,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "366:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "358:47:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$_$",
+                "typeString": "mapping(address => mapping(address => struct Platform.Diploma))"
+              },
+              "valueType": {
+                "id": 380,
+                "keyType": {
+                  "id": 378,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "385:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "377:27:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$",
+                  "typeString": "mapping(address => struct Platform.Diploma)"
+                },
+                "valueType": {
+                  "contractScope": null,
+                  "id": 379,
+                  "name": "Diploma",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 367,
+                  "src": "396:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                    "typeString": "struct Platform.Diploma"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 386,
+            "name": "personMapping",
+            "nodeType": "VariableDeclaration",
+            "scope": 525,
+            "src": "470:40:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+              "typeString": "mapping(address => struct Platform.Person)"
+            },
+            "typeName": {
+              "id": 385,
+              "keyType": {
+                "id": 383,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "478:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "470:26:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                "typeString": "mapping(address => struct Platform.Person)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 384,
+                "name": "Person",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 376,
+                "src": "489:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                  "typeString": "struct Platform.Person"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 389,
+              "nodeType": "Block",
+              "src": "539:16:4",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 390,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 387,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "529:2:4"
+            },
+            "returnParameters": {
+              "id": 388,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "539:0:4"
+            },
+            "scope": 525,
+            "src": "517:38:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 429,
+              "nodeType": "Block",
+              "src": "675:254:4",
+              "statements": [
+                {
+                  "assignments": [
+                    400
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 400,
+                      "name": "newDiploma",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 429,
+                      "src": "685:25:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_memory_ptr",
+                        "typeString": "struct Platform.Diploma"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 399,
+                        "name": "Diploma",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 367,
+                        "src": "685:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                          "typeString": "struct Platform.Diploma"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 405,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 402,
+                        "name": "_degree",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 394,
+                        "src": "721:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 403,
+                        "name": "_date",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 396,
+                        "src": "729:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 401,
+                      "name": "Diploma",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 367,
+                      "src": "713:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Diploma_$367_storage_ptr_$",
+                        "typeString": "type(struct Platform.Diploma storage pointer)"
+                      }
+                    },
+                    "id": 404,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "713:22:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Diploma_$367_memory",
+                      "typeString": "struct Platform.Diploma memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "685:50:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 413,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 406,
+                          "name": "universityMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 382,
+                          "src": "746:17:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$_$",
+                            "typeString": "mapping(address => mapping(address => struct Platform.Diploma storage ref))"
+                          }
+                        },
+                        "id": 410,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 407,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 563,
+                            "src": "764:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 408,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "764:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "746:29:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$",
+                          "typeString": "mapping(address => struct Platform.Diploma storage ref)"
+                        }
+                      },
+                      "id": 411,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 409,
+                        "name": "_studentAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 392,
+                        "src": "776:15:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "746:46:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                        "typeString": "struct Platform.Diploma storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 412,
+                      "name": "newDiploma",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 400,
+                      "src": "795:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_memory_ptr",
+                        "typeString": "struct Platform.Diploma memory"
+                      }
+                    },
+                    "src": "746:59:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                      "typeString": "struct Platform.Diploma storage ref"
+                    }
+                  },
+                  "id": 414,
+                  "nodeType": "ExpressionStatement",
+                  "src": "746:59:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 420,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 415,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "815:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 417,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 416,
+                          "name": "_studentAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 392,
+                          "src": "829:15:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "815:30:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 418,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "degree",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 373,
+                      "src": "815:37:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                        "typeString": "struct Platform.Diploma storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 419,
+                      "name": "newDiploma",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 400,
+                      "src": "855:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_memory_ptr",
+                        "typeString": "struct Platform.Diploma memory"
+                      }
+                    },
+                    "src": "815:50:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                      "typeString": "struct Platform.Diploma storage ref"
+                    }
+                  },
+                  "id": 421,
+                  "nodeType": "ExpressionStatement",
+                  "src": "815:50:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 427,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 422,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "875:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 424,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 423,
+                          "name": "_studentAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 392,
+                          "src": "889:15:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "875:30:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 425,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lastUpdate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 375,
+                      "src": "875:41:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 426,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 565,
+                      "src": "919:3:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "875:47:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 428,
+                  "nodeType": "ExpressionStatement",
+                  "src": "875:47:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 430,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addDipoloma",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 392,
+                  "name": "_studentAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 430,
+                  "src": "608:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 391,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 394,
+                  "name": "_degree",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 430,
+                  "src": "633:21:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 393,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "633:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 396,
+                  "name": "_date",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 430,
+                  "src": "656:10:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 395,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:60:4"
+            },
+            "returnParameters": {
+              "id": 398,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "675:0:4"
+            },
+            "scope": 525,
+            "src": "587:342:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 455,
+              "nodeType": "Block",
+              "src": "1104:144:4",
+              "statements": [
+                {
+                  "assignments": [
+                    442
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 442,
+                      "name": "diploma",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 455,
+                      "src": "1114:23:4",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                        "typeString": "struct Platform.Diploma"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 441,
+                        "name": "Diploma",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 367,
+                        "src": "1114:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                          "typeString": "struct Platform.Diploma"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 448,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 443,
+                        "name": "universityMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 382,
+                        "src": "1140:17:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$_$",
+                          "typeString": "mapping(address => mapping(address => struct Platform.Diploma storage ref))"
+                        }
+                      },
+                      "id": 445,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 444,
+                        "name": "_universityAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 434,
+                        "src": "1158:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1140:37:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$",
+                        "typeString": "mapping(address => struct Platform.Diploma storage ref)"
+                      }
+                    },
+                    "id": 447,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 446,
+                      "name": "_studentAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 432,
+                      "src": "1178:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1140:54:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                      "typeString": "struct Platform.Diploma storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1114:80:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 449,
+                          "name": "diploma",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 442,
+                          "src": "1212:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                            "typeString": "struct Platform.Diploma storage pointer"
+                          }
+                        },
+                        "id": 450,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "degree",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 364,
+                        "src": "1212:14:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 451,
+                          "name": "diploma",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 442,
+                          "src": "1228:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                            "typeString": "struct Platform.Diploma storage pointer"
+                          }
+                        },
+                        "id": 452,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "date",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 366,
+                        "src": "1228:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 453,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1211:30:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_uint256_$",
+                      "typeString": "tuple(string storage ref,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 440,
+                  "id": 454,
+                  "nodeType": "Return",
+                  "src": "1204:37:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 456,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewDiploma",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 435,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 432,
+                  "name": "_studentAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "1010:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 431,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1010:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 434,
+                  "name": "_universityAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "1035:26:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 433,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1035:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1009:53:4"
+            },
+            "returnParameters": {
+              "id": 440,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 437,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "1083:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 436,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1083:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 439,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "1098:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 438,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1098:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1082:21:4"
+            },
+            "scope": 525,
+            "src": "989:259:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 487,
+              "nodeType": "Block",
+              "src": "1357:157:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 469,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 463,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "1367:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 466,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 464,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 563,
+                            "src": "1381:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 465,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1381:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1367:25:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 467,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "name",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 369,
+                      "src": "1367:30:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 468,
+                      "name": "_name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 458,
+                      "src": "1400:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1367:38:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 470,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1367:38:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 477,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 471,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "1415:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 474,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 472,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 563,
+                            "src": "1429:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 473,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1429:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1415:25:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 475,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "email",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 371,
+                      "src": "1415:31:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 476,
+                      "name": "_email",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 460,
+                      "src": "1449:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1415:40:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 478,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1415:40:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 485,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 479,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "1465:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 482,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 480,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 563,
+                            "src": "1479:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 481,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1479:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1465:25:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 483,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lastUpdate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 375,
+                      "src": "1465:36:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 484,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 565,
+                      "src": "1504:3:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1465:42:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 486,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1465:42:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 488,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updatePerson",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 461,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 458,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 488,
+                  "src": "1308:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 457,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1308:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 460,
+                  "name": "_email",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 488,
+                  "src": "1329:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 459,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1329:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1307:43:4"
+            },
+            "returnParameters": {
+              "id": 462,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1357:0:4"
+            },
+            "scope": 525,
+            "src": "1286:228:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 523,
+              "nodeType": "Block",
+              "src": "1675:170:4",
+              "statements": [
+                {
+                  "assignments": [
+                    504
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 504,
+                      "name": "person",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 523,
+                      "src": "1685:21:4",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                        "typeString": "struct Platform.Person"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 503,
+                        "name": "Person",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 376,
+                        "src": "1685:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                          "typeString": "struct Platform.Person"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 508,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 505,
+                      "name": "personMapping",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 386,
+                      "src": "1709:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                        "typeString": "mapping(address => struct Platform.Person storage ref)"
+                      }
+                    },
+                    "id": 507,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 506,
+                      "name": "_personAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 490,
+                      "src": "1723:14:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1709:29:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Person_$376_storage",
+                      "typeString": "struct Platform.Person storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1685:53:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 509,
+                          "name": "person",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 504,
+                          "src": "1755:6:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                            "typeString": "struct Platform.Person storage pointer"
+                          }
+                        },
+                        "id": 510,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "name",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 369,
+                        "src": "1755:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 511,
+                          "name": "person",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 504,
+                          "src": "1767:6:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                            "typeString": "struct Platform.Person storage pointer"
+                          }
+                        },
+                        "id": 512,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "email",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 371,
+                        "src": "1767:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 513,
+                            "name": "person",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 504,
+                            "src": "1780:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                              "typeString": "struct Platform.Person storage pointer"
+                            }
+                          },
+                          "id": 514,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "degree",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 373,
+                          "src": "1780:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                            "typeString": "struct Platform.Diploma storage ref"
+                          }
+                        },
+                        "id": 515,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "degree",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 364,
+                        "src": "1780:20:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 516,
+                            "name": "person",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 504,
+                            "src": "1801:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                              "typeString": "struct Platform.Person storage pointer"
+                            }
+                          },
+                          "id": 517,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "degree",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 373,
+                          "src": "1801:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                            "typeString": "struct Platform.Diploma storage ref"
+                          }
+                        },
+                        "id": 518,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "date",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 366,
+                        "src": "1801:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 519,
+                          "name": "person",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 504,
+                          "src": "1820:6:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                            "typeString": "struct Platform.Person storage pointer"
+                          }
+                        },
+                        "id": 520,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "lastUpdate",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 375,
+                        "src": "1820:17:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 521,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1754:84:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_string_storage_$_t_string_storage_$_t_uint256_$_t_uint256_$",
+                      "typeString": "tuple(string storage ref,string storage ref,string storage ref,uint256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 502,
+                  "id": 522,
+                  "nodeType": "Return",
+                  "src": "1748:90:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 524,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewPerson",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 491,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 490,
+                  "name": "_personAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1576:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 489,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1576:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1575:24:4"
+            },
+            "returnParameters": {
+              "id": 502,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 493,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1620:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 492,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1620:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 495,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1634:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 494,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1634:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 497,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1649:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 496,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1649:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 499,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1663:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 498,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1663:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 501,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1669:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 500,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1669:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1619:55:4"
+            },
+            "scope": 525,
+            "src": "1556:289:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 526,
+        "src": "25:1823:4"
+      }
+    ],
+    "src": "0:1860:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/vagrant/host/FP/contracts/Platform.sol",
+    "exportedSymbols": {
+      "Platform": [
+        525
+      ]
+    },
+    "id": 526,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 362,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 525,
+        "linearizedBaseContracts": [
+          525
+        ],
+        "name": "Platform",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Platform.Diploma",
+            "id": 367,
+            "members": [
+              {
+                "constant": false,
+                "id": 364,
+                "name": "degree",
+                "nodeType": "VariableDeclaration",
+                "scope": 367,
+                "src": "104:13:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 363,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "104:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 366,
+                "name": "date",
+                "nodeType": "VariableDeclaration",
+                "scope": 367,
+                "src": "127:9:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 365,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "127:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Diploma",
+            "nodeType": "StructDefinition",
+            "scope": 525,
+            "src": "77:67:4",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Platform.Person",
+            "id": 376,
+            "members": [
+              {
+                "constant": false,
+                "id": 369,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 376,
+                "src": "203:11:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 368,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "203:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 371,
+                "name": "email",
+                "nodeType": "VariableDeclaration",
+                "scope": 376,
+                "src": "224:12:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 370,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "224:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 373,
+                "name": "degree",
+                "nodeType": "VariableDeclaration",
+                "scope": 376,
+                "src": "247:14:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                  "typeString": "struct Platform.Diploma"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 372,
+                  "name": "Diploma",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 367,
+                  "src": "247:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                    "typeString": "struct Platform.Diploma"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 375,
+                "name": "lastUpdate",
+                "nodeType": "VariableDeclaration",
+                "scope": 376,
+                "src": "271:15:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 374,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "271:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Person",
+            "nodeType": "StructDefinition",
+            "scope": 525,
+            "src": "177:118:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 382,
+            "name": "universityMapping",
+            "nodeType": "VariableDeclaration",
+            "scope": 525,
+            "src": "358:65:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$_$",
+              "typeString": "mapping(address => mapping(address => struct Platform.Diploma))"
+            },
+            "typeName": {
+              "id": 381,
+              "keyType": {
+                "id": 377,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "366:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "358:47:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$_$",
+                "typeString": "mapping(address => mapping(address => struct Platform.Diploma))"
+              },
+              "valueType": {
+                "id": 380,
+                "keyType": {
+                  "id": 378,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "385:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "377:27:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$",
+                  "typeString": "mapping(address => struct Platform.Diploma)"
+                },
+                "valueType": {
+                  "contractScope": null,
+                  "id": 379,
+                  "name": "Diploma",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 367,
+                  "src": "396:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                    "typeString": "struct Platform.Diploma"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 386,
+            "name": "personMapping",
+            "nodeType": "VariableDeclaration",
+            "scope": 525,
+            "src": "470:40:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+              "typeString": "mapping(address => struct Platform.Person)"
+            },
+            "typeName": {
+              "id": 385,
+              "keyType": {
+                "id": 383,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "478:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "470:26:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                "typeString": "mapping(address => struct Platform.Person)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 384,
+                "name": "Person",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 376,
+                "src": "489:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                  "typeString": "struct Platform.Person"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 389,
+              "nodeType": "Block",
+              "src": "539:16:4",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 390,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 387,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "529:2:4"
+            },
+            "returnParameters": {
+              "id": 388,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "539:0:4"
+            },
+            "scope": 525,
+            "src": "517:38:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 429,
+              "nodeType": "Block",
+              "src": "675:254:4",
+              "statements": [
+                {
+                  "assignments": [
+                    400
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 400,
+                      "name": "newDiploma",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 429,
+                      "src": "685:25:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_memory_ptr",
+                        "typeString": "struct Platform.Diploma"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 399,
+                        "name": "Diploma",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 367,
+                        "src": "685:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                          "typeString": "struct Platform.Diploma"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 405,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 402,
+                        "name": "_degree",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 394,
+                        "src": "721:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 403,
+                        "name": "_date",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 396,
+                        "src": "729:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 401,
+                      "name": "Diploma",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 367,
+                      "src": "713:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Diploma_$367_storage_ptr_$",
+                        "typeString": "type(struct Platform.Diploma storage pointer)"
+                      }
+                    },
+                    "id": 404,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "713:22:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Diploma_$367_memory",
+                      "typeString": "struct Platform.Diploma memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "685:50:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 413,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 406,
+                          "name": "universityMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 382,
+                          "src": "746:17:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$_$",
+                            "typeString": "mapping(address => mapping(address => struct Platform.Diploma storage ref))"
+                          }
+                        },
+                        "id": 410,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 407,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 563,
+                            "src": "764:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 408,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "764:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "746:29:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$",
+                          "typeString": "mapping(address => struct Platform.Diploma storage ref)"
+                        }
+                      },
+                      "id": 411,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 409,
+                        "name": "_studentAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 392,
+                        "src": "776:15:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "746:46:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                        "typeString": "struct Platform.Diploma storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 412,
+                      "name": "newDiploma",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 400,
+                      "src": "795:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_memory_ptr",
+                        "typeString": "struct Platform.Diploma memory"
+                      }
+                    },
+                    "src": "746:59:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                      "typeString": "struct Platform.Diploma storage ref"
+                    }
+                  },
+                  "id": 414,
+                  "nodeType": "ExpressionStatement",
+                  "src": "746:59:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 420,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 415,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "815:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 417,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 416,
+                          "name": "_studentAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 392,
+                          "src": "829:15:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "815:30:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 418,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "degree",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 373,
+                      "src": "815:37:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                        "typeString": "struct Platform.Diploma storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 419,
+                      "name": "newDiploma",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 400,
+                      "src": "855:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_memory_ptr",
+                        "typeString": "struct Platform.Diploma memory"
+                      }
+                    },
+                    "src": "815:50:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                      "typeString": "struct Platform.Diploma storage ref"
+                    }
+                  },
+                  "id": 421,
+                  "nodeType": "ExpressionStatement",
+                  "src": "815:50:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 427,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 422,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "875:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 424,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 423,
+                          "name": "_studentAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 392,
+                          "src": "889:15:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "875:30:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 425,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lastUpdate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 375,
+                      "src": "875:41:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 426,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 565,
+                      "src": "919:3:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "875:47:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 428,
+                  "nodeType": "ExpressionStatement",
+                  "src": "875:47:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 430,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addDipoloma",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 392,
+                  "name": "_studentAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 430,
+                  "src": "608:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 391,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 394,
+                  "name": "_degree",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 430,
+                  "src": "633:21:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 393,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "633:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 396,
+                  "name": "_date",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 430,
+                  "src": "656:10:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 395,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:60:4"
+            },
+            "returnParameters": {
+              "id": 398,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "675:0:4"
+            },
+            "scope": 525,
+            "src": "587:342:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 455,
+              "nodeType": "Block",
+              "src": "1104:144:4",
+              "statements": [
+                {
+                  "assignments": [
+                    442
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 442,
+                      "name": "diploma",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 455,
+                      "src": "1114:23:4",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                        "typeString": "struct Platform.Diploma"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 441,
+                        "name": "Diploma",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 367,
+                        "src": "1114:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                          "typeString": "struct Platform.Diploma"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 448,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 443,
+                        "name": "universityMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 382,
+                        "src": "1140:17:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$_$",
+                          "typeString": "mapping(address => mapping(address => struct Platform.Diploma storage ref))"
+                        }
+                      },
+                      "id": 445,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 444,
+                        "name": "_universityAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 434,
+                        "src": "1158:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1140:37:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Diploma_$367_storage_$",
+                        "typeString": "mapping(address => struct Platform.Diploma storage ref)"
+                      }
+                    },
+                    "id": 447,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 446,
+                      "name": "_studentAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 432,
+                      "src": "1178:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1140:54:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                      "typeString": "struct Platform.Diploma storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1114:80:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 449,
+                          "name": "diploma",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 442,
+                          "src": "1212:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                            "typeString": "struct Platform.Diploma storage pointer"
+                          }
+                        },
+                        "id": 450,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "degree",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 364,
+                        "src": "1212:14:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 451,
+                          "name": "diploma",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 442,
+                          "src": "1228:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Diploma_$367_storage_ptr",
+                            "typeString": "struct Platform.Diploma storage pointer"
+                          }
+                        },
+                        "id": 452,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "date",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 366,
+                        "src": "1228:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 453,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1211:30:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_uint256_$",
+                      "typeString": "tuple(string storage ref,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 440,
+                  "id": 454,
+                  "nodeType": "Return",
+                  "src": "1204:37:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 456,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewDiploma",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 435,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 432,
+                  "name": "_studentAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "1010:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 431,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1010:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 434,
+                  "name": "_universityAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "1035:26:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 433,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1035:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1009:53:4"
+            },
+            "returnParameters": {
+              "id": 440,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 437,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "1083:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 436,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1083:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 439,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "1098:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 438,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1098:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1082:21:4"
+            },
+            "scope": 525,
+            "src": "989:259:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 487,
+              "nodeType": "Block",
+              "src": "1357:157:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 469,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 463,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "1367:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 466,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 464,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 563,
+                            "src": "1381:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 465,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1381:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1367:25:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 467,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "name",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 369,
+                      "src": "1367:30:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 468,
+                      "name": "_name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 458,
+                      "src": "1400:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1367:38:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 470,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1367:38:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 477,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 471,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "1415:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 474,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 472,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 563,
+                            "src": "1429:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 473,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1429:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1415:25:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 475,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "email",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 371,
+                      "src": "1415:31:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 476,
+                      "name": "_email",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 460,
+                      "src": "1449:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1415:40:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 478,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1415:40:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 485,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 479,
+                          "name": "personMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 386,
+                          "src": "1465:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                            "typeString": "mapping(address => struct Platform.Person storage ref)"
+                          }
+                        },
+                        "id": 482,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 480,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 563,
+                            "src": "1479:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 481,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1479:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1465:25:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage",
+                          "typeString": "struct Platform.Person storage ref"
+                        }
+                      },
+                      "id": 483,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lastUpdate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 375,
+                      "src": "1465:36:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 484,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 565,
+                      "src": "1504:3:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1465:42:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 486,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1465:42:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 488,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updatePerson",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 461,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 458,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 488,
+                  "src": "1308:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 457,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1308:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 460,
+                  "name": "_email",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 488,
+                  "src": "1329:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 459,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1329:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1307:43:4"
+            },
+            "returnParameters": {
+              "id": 462,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1357:0:4"
+            },
+            "scope": 525,
+            "src": "1286:228:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 523,
+              "nodeType": "Block",
+              "src": "1675:170:4",
+              "statements": [
+                {
+                  "assignments": [
+                    504
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 504,
+                      "name": "person",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 523,
+                      "src": "1685:21:4",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                        "typeString": "struct Platform.Person"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 503,
+                        "name": "Person",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 376,
+                        "src": "1685:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                          "typeString": "struct Platform.Person"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 508,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 505,
+                      "name": "personMapping",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 386,
+                      "src": "1709:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$376_storage_$",
+                        "typeString": "mapping(address => struct Platform.Person storage ref)"
+                      }
+                    },
+                    "id": 507,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 506,
+                      "name": "_personAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 490,
+                      "src": "1723:14:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1709:29:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Person_$376_storage",
+                      "typeString": "struct Platform.Person storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1685:53:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 509,
+                          "name": "person",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 504,
+                          "src": "1755:6:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                            "typeString": "struct Platform.Person storage pointer"
+                          }
+                        },
+                        "id": 510,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "name",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 369,
+                        "src": "1755:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 511,
+                          "name": "person",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 504,
+                          "src": "1767:6:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                            "typeString": "struct Platform.Person storage pointer"
+                          }
+                        },
+                        "id": 512,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "email",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 371,
+                        "src": "1767:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 513,
+                            "name": "person",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 504,
+                            "src": "1780:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                              "typeString": "struct Platform.Person storage pointer"
+                            }
+                          },
+                          "id": 514,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "degree",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 373,
+                          "src": "1780:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                            "typeString": "struct Platform.Diploma storage ref"
+                          }
+                        },
+                        "id": 515,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "degree",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 364,
+                        "src": "1780:20:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 516,
+                            "name": "person",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 504,
+                            "src": "1801:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                              "typeString": "struct Platform.Person storage pointer"
+                            }
+                          },
+                          "id": 517,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "degree",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 373,
+                          "src": "1801:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Diploma_$367_storage",
+                            "typeString": "struct Platform.Diploma storage ref"
+                          }
+                        },
+                        "id": 518,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "date",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 366,
+                        "src": "1801:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 519,
+                          "name": "person",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 504,
+                          "src": "1820:6:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Person_$376_storage_ptr",
+                            "typeString": "struct Platform.Person storage pointer"
+                          }
+                        },
+                        "id": 520,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "lastUpdate",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 375,
+                        "src": "1820:17:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 521,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1754:84:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_string_storage_$_t_string_storage_$_t_uint256_$_t_uint256_$",
+                      "typeString": "tuple(string storage ref,string storage ref,string storage ref,uint256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 502,
+                  "id": 522,
+                  "nodeType": "Return",
+                  "src": "1748:90:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 524,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewPerson",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 491,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 490,
+                  "name": "_personAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1576:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 489,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1576:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1575:24:4"
+            },
+            "returnParameters": {
+              "id": 502,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 493,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1620:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 492,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1620:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 495,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1634:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 494,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1634:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 497,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1649:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 496,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1649:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 499,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1663:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 498,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1663:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 501,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 524,
+                  "src": "1669:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 500,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1669:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1619:55:4"
+            },
+            "scope": 525,
+            "src": "1556:289:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 526,
+        "src": "25:1823:4"
+      }
+    ],
+    "src": "0:1860:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x52317042B1148ACF8F462BaF385DB17E65002125",
+      "transactionHash": "0x009dc3aceb9151e5bab79a8427763e249b57715c314927b66aa8a15185b4c015"
+    }
+  },
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-04-19T20:17:48.158Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
