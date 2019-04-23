@@ -76,7 +76,7 @@ class Check extends Component {
             this.state.contract.methods.viewDiploma(studentAddress,universityAddress).call()
                 .then((result) => {
 
-                    console.log("this is the result: " + result);
+                    console.log(result);
 
                     // this.setState({
                     //     degree: result.degree,
