@@ -76,7 +76,7 @@ class Detail extends Component {
 
         return (
             <div id="container">
-                <form className="pure-form pure-form-stacked">
+                <form className="pure-form pure-form-stacked normal">
                     <div className="title">Degree Details: </div>
                     <div className="leftpart">
                         <div className="addText">Student Address:</div>

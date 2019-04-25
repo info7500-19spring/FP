@@ -167,7 +167,7 @@ class AddDiploma extends Component {
         }
         return (
             <div id="container">
-                <form className="pure-form pure-form-stacked" onSubmit= {(e) => {
+                <form className="pure-form pure-form-stacked normal" onSubmit= {(e) => {
                     e.preventDefault();
                     // this.addToSimpleStorage();
                     this.addToplatform();

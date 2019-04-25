@@ -104,8 +104,18 @@ body {
   padding-top: 1px;
 }
 
-form {
+.normal {
   background: url(images/form-bg.png) top left no-repeat;
+  /*background-color: #323232;*/
+  /*border:solid rgba(255,250,250,0.51) 15px;*/
+  /*border-radius: 20px;*/
+  width: 524px;
+  height: 262px;
+  padding-top: 1px;
+}
+
+.personDetail{
+  background: url(images/bigback.png) top left no-repeat;
   /*background-color: #323232;*/
   /*border:solid rgba(255,250,250,0.51) 15px;*/
   /*border-radius: 20px;*/

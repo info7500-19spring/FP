@@ -65,7 +65,7 @@ class PersonDetail extends Component {
 
         return (
             <div id="container">
-                <form className="pure-form pure-form-stacked">
+                <form className="pure-form pure-form-stacked personDetail">
                     <div className="title">Person Details: </div>
                     <div className="leftpart">
                         <div className="addText">Address:</div>
