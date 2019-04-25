@@ -60,10 +60,11 @@ table {
 
 /* ------- Disable background and border for input fields ------- */
 
-input {
+input, a {
   background: transparent;
   border: 0;
 }
+
 
 
 
@@ -93,15 +94,54 @@ body {
 
 /* ------- Login Form ------- */
 
-form, .welcome {
-  background: url(images/form-bg.png) top left no-repeat;
+.welcome {
+  /*background: url(images/form-bg.png) top left no-repeat;*/
+  background-color: #323232;
+  border:solid rgba(255,250,250,0.51) 15px;
+  border-radius: 20px;
   width: 524px;
   height: 262px;
   padding-top: 1px;
 }
 
+.normal {
+  background: url(images/form-bg.png) top left no-repeat;
+  /*background-color: #323232;*/
+  /*border:solid rgba(255,250,250,0.51) 15px;*/
+  /*border-radius: 20px;*/
+  width: 524px;
+  height: 262px;
+  padding-top: 1px;
+}
+
+.personDetail{
+  background: url(images/bigback.png) top left no-repeat;
+  /*background-color: #323232;*/
+  /*border:solid rgba(255,250,250,0.51) 15px;*/
+  /*border-radius: 20px;*/
+  width: 524px;
+  height: 262px;
+  padding-top: 1px;
+}
+
+.leftpart{
+  width: 70%;
+  float: left;
+  margin-top: 30px;
+  margin-left: 40px;
+  line-height: 16px;
+}
+
+.rightpart{
+  width: 15%;
+  height: 100%;
+  margin-top: 60px;
+  margin-left: 10px;
+  float: left;
+}
+
 .title, .welcome-user {
-  width: 470px;
+  width: 100%;
   float: left;
   margin-top: 33px;
   margin-left: 40px;
@@ -109,17 +149,12 @@ form, .welcome {
 }
 
 .addText {
-  width: 30%;
+  width: 35%;
+  height: 30px;
+  padding-top: 10px;
   float: left;
-  margin-top: 50px;
-  margin-left: 40px;
-}
-
-.addText1 {
-  width: 30%;
-  float: left;
-  margin-top: 20px;
-  margin-left: 40px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .password-text {
@@ -130,34 +165,30 @@ form, .welcome {
 }
 
 .welcome-text {
-  width: 360px;
+  width: 60%;
   float: left;
   margin-top: 50px;
   margin-left: 40px;
+  padding-right: 20px;
   line-height: 16px;
+  border-right: #cbcbcb 2px solid;
 }
 
 .username-field {
-  width: 60%;
-  height: 38px;
+  width: 55%;
+  height: 30px;
   float:left;
-  margin-top: 35px;
+  margin-top: 10px;
   margin-left: 10px;
-  background: url(images/username-field.png) center left no-repeat;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 
-.username-field1 {
-  width: 40%;
-  height: 28px;
-  float: left;
-  margin-top: 15px;
-  margin-left: 10px;
-  background: url(images/username-field.png) center left no-repeat;
-}
 
-.username-field:hover , .username-field1:hover {
-  background: url(images/username-field-hover.png) center left no-repeat;
-}
+/*.username-field:hover , .username-field1:hover {*/
+/*  background: url(images/username-field-hover.png) center left no-repeat;*/
+/*}*/
 
 .password-field {
   width: 280px;
@@ -239,33 +270,69 @@ input[type="checkbox"]:not(:checked):hover + label, input[type="checkbox"]:not(:
   text-decoration: underline;
 }
 
-input[type="submit"] {
+.button{
   width: 95px;
-  height: 73px;
+  height: 40px;
   float: left;
-  margin-top: 12px;
+  margin-top: 30px;
   margin-left: 2px;
   font-family: Verdana, Arial;
   font-size: 20px;
   color: #ffffff;
 }
 
-input[type="submit"]:hover, input[type="submit"]:focus {
+.abutton{
+  text-decoration: none;
+  width: 95px;
+  height: 15px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 2px;
+  font-family: Verdana, Arial;
+  font-size: 15px;
+  color: #ffffff;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+}
+
+.backbutton{
+  text-decoration: none;
+  width: 95px;
+  height: 15px;
+  float: left;
+  margin-top: 50px;
+  margin-left: 2px;
+  font-family: Verdana, Arial;
+  font-size: 20px;
+  color: #ffffff;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+}
+
+button:hover, button:focus {
   background: url(images/go-hover.png) top left no-repeat;
+}
+
+.buttonarea{
+  width: 25%;
+  height: 70%;
+  margin-top: 60px;
+  margin-left: 10px;
+  float: left;
 }
 
 .home {
-  width: 70px;
-  height: 73px;
+  width: 100%;
+  /*height: 10px;*/
   float: left;
-  margin-top: 100px;
-  margin-left: 21px;
   font-size: 12px;
-  padding: 25px 0 0 15px;
+  padding: 5px 0 5px 15px;
 }
 
 .home:hover, .home:focus {
-  background: url(images/go-hover.png) top left no-repeat;
+  background: url(images/go-hover.png)no-repeat;
 }
 
 .home a, .home a:hover, .home a:focus {

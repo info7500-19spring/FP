@@ -8,8 +8,11 @@
     "react-scripts": "2.1.0"
   },
   "babel": {
-    "presets": [ "es2015", "react" ]
-  }, 
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

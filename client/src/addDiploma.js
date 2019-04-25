@@ -6,7 +6,7 @@ import React, { Component } from "react";
 import "./App.css";
 import {Link} from "react-router-dom";
 // import INFO from "./info";
-import userInfo from"./info";
+import Info from"./info";
 // import getWeb3 from "./utils/getWeb3";
 // import platformContract from "./contracts/Platform";
 // import Web3 from "web3";
@@ -17,9 +17,9 @@ class AddDiploma extends Component {
 
         this.state = {
             storageValue: 0,
-            web3: userInfo.web3,
-            accounts: userInfo.accounts,
-            contract: userInfo.contract,
+            web3: Info.web3,
+            accounts: Info.accounts,
+            contract: Info.contract,
             studentAddress:'',
             degree:'',
             date:''
@@ -133,7 +133,7 @@ class AddDiploma extends Component {
             console.log(date);
             this.state.contract.methods.addDipoloma(studentAddress,degree,date).send({from: this.state.accounts[0]})
                 .then((result) => {
-                    console.log("in add diploma [addToPlatform] result"+result);
+                    console.log(result);
                 }).catch((err) => {
                 console.log('error');
                 console.log(err);
@@ -167,42 +167,46 @@ class AddDiploma extends Component {
         }
         return (
             <div id="container">
-                <form className="pure-form pure-form-stacked" onSubmit= {(e) => {
+                <form className="pure-form pure-form-stacked normal" onSubmit= {(e) => {
                     e.preventDefault();
                     // this.addToSimpleStorage();
                     this.addToplatform();
                 }}>
                     <div className="title">Add Diploma</div>
-                    <div className="addText">Student Address:</div>
-                    <div className="username-field">
-                        <input
-                            name="studentAddress"
-                            type="text"
-                            value={this.state.studentAddress}
-                            onChange={this.handleChange}
-                        />
+                    <div className="leftpart">
+                        <div className="addText">Student Address:</div>
+                        <div className="username-field">
+                            <input
+                                name="studentAddress"
+                                type="text"
+                                value={this.state.studentAddress}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        <div className="addText">Degree:</div>
+                        <div className="username-field">
+                            <input
+                                name="degree"
+                                type="text"
+                                value = {this.state.degree}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        <div className="addText">Date: </div>
+                        <div className="username-field">
+                            <input
+                                name="date"
+                                type="text"
+                                value={this.state.date}
+                                onChange={this.handleChange}
+                            />
+                        </div>
                     </div>
-                    <div className="addText1">Degree:</div>
-                    <div className="username-field1">
-                        <input
-                            name="degree"
-                            type="text"
-                            value = {this.state.degree}
-                            onChange={this.handleChange}
-                        />
+                    <div className="rightpart">
+                        <input className="button" type = "submit" name="submit" value = "Submit"/>
+                        <Link to="/home" className="abutton">Back</Link>
                     </div>
-                    <div className="addText1">Date: </div>
-                    <div className="username-field1">
-                        <input
-                            name="date"
-                            type="text"
-                            value={this.state.date}
-                            onChange={this.handleChange}
-                        />
-                    </div>
-                    <input type = "submit" name="submit" value = "submit"/>
                 </form>
-                <div><Link to="/home">Back</Link></div>
             </div>
         );
     }

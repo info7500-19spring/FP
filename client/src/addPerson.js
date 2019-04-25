@@ -5,7 +5,7 @@ import React, { Component } from "react";
 
 import "./App.css";
 import {Link} from "react-router-dom";
-import userInfo from"./info";
+import Info from"./info";
 // import getWeb3 from "./utils/getWeb3";
 // import platformContract from "./contracts/Platform";
 // import Web3 from "web3";
@@ -16,87 +16,17 @@ class AddPerson extends Component {
 
         this.state = {
             storageValue: 0,
-            web3: userInfo.web3,
-            accounts: userInfo.accounts,
-            contract: userInfo.contract,
+            web3: Info.web3,
+            accounts: Info.accounts,
+            contract: Info.contract,
             studentName:'',
             email:''
         };
-        // this.state = {
-        //     storageValue: 0,
-        //     web3: null,
-        //     accounts: null,
-        //     contract: null,
-        //     studentAddress:'',
-        //     degree:'',
-        //     date:''
-        // };
+
         this.addToSimpleStorage = this.addToSimpleStorage.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
-
-    // runExample = async () => {
-    //   const { accounts, contract } = this.state;
-
-    //   // Stores a given value, 5 by default.
-    //   await contract.methods.set(5).send({ from: accounts[0] });
-
-    //   // Get the value from the contract to prove it worked.
-    //   const response = await contract.methods.get().call();
-
-    //   // Update state with the result.
-    //   this.setState({ storageValue: response });
-    // };
-    // componentDidMount = async () => {
-    //
-    //     try {
-    //         // if(this.state.web3==null) {
-    //
-    //         // Get network provider and web3 instance.
-    //         const web3 = await getWeb3();
-    //
-    //         // Use web3 to get the user's accounts.
-    //         const accounts = await web3.eth.getAccounts();
-    //
-    //         // Get the contract instance.
-    //         const networkId = await web3.eth.net.getId();
-    //
-    //         // const deployedNetwork = SimpleStorageContract.networks[networkId];
-    //         const deployedNetwork = platformContract.networks[networkId];
-    //
-    //         // const instance = new web3.eth.Contract(
-    //         //   SimpleStorageContract.abi,
-    //         //   deployedNetwork && deployedNetwork.address,
-    //         // );
-    //         const instance = new web3.eth.Contract(
-    //             platformContract.abi,
-    //             deployedNetwork && deployedNetwork.address,
-    //         );
-    //
-    //
-    //         // Set web3, accounts, and contract to the state, and then proceed with an
-    //         // example of interacting with the contract's methods.
-    //         // this.setState({ web3, accounts, contract: instance }, this.runExample);
-    //         this.setState({web3, accounts, contract: instance});
-    //
-    //
-    //
-    //         // userInfo.web3 = this.state.web3;
-    //         // userInfo.accounts = this.state.accounts;
-    //         // userInfo.contract = this.state.contract;
-    //
-    //
-    //
-    //     } catch (error) {
-    //
-    //         // Catch any errors for any of the above operations.
-    //         alert(
-    //             `Failed to load web3, accounts, or contract. Check console for details.`
-    //         );
-    //         console.error(error);
-    //     }
-    // };
 
     addToSimpleStorage() {
         if (this.state.contract && this.state.accounts) {
@@ -129,7 +59,8 @@ class AddPerson extends Component {
             console.log(email);
             this.state.contract.methods.updatePerson(studentName,email).send({from: this.state.accounts[0]})
                 .then((result) => {
-                    console.log("add to platform result"+result);
+                    console.log("in add person");
+                    console.log(result);
                 }).catch((err) => {
                 console.log('error');
                 console.log(err);
@@ -163,34 +94,39 @@ class AddPerson extends Component {
         }
         return (
             <div id="container">
-                <form className="pure-form pure-form-stacked" onSubmit= {(e) => {
+                <form className="pure-form pure-form-stacked normal" onSubmit= {(e) => {
                     e.preventDefault();
                     // this.addToSimpleStorage();
                     this.addToplatform();
                 }}>
                     <div className="title">Add Person</div>
-                    <div className="addText">Student Name:</div>
-                    <div className="username-field">
-                        <input
-                            name="studentName"
-                            type="text"
-                            value={this.state.studentName}
-                            onChange={this.handleChange}
-                        />
+                    <div className="leftpart">
+                        <div className="addText">Student Name:</div>
+                        <div className="username-field">
+                            <input
+                                name="studentName"
+                                type="text"
+                                value={this.state.studentName}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        <div className="addText">Email:</div>
+                        <div className="username-field">
+                            <input
+                                name="email"
+                                type="text"
+                                value = {this.state.email}
+                                onChange={this.handleChange}
+                            />
+                        </div>
                     </div>
-                    <div className="addText1">Email:</div>
-                    <div className="username-field1">
-                        <input
-                            name="email"
-                            type="text"
-                            value = {this.state.email}
-                            onChange={this.handleChange}
-                        />
+                    <div className="rightpart">
+                        <input className="button" type = "submit" name="submit" value = "Submit"/>
+                        <Link to="/home" className="abutton">Back</Link>
                     </div>
-
-                    <input type = "submit" name="submit" value = "submit"/>
                 </form>
-                <div><Link to="/home">Back</Link></div>
+
+
             </div>
         );
     }

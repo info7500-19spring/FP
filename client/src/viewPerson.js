@@ -11,7 +11,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 // import Web3 from "web3";
 
 
-class Check extends Component {
+class SearchPerson extends Component {
     constructor(props) {
         super(props);
 
@@ -21,9 +21,11 @@ class Check extends Component {
             accounts: Info.accounts,
             contract: Info.contract,
             studentAddress:'',
-            universityAddress:'',
-            degree:'',
-            path:'detail',
+            person:'',
+            email:'',
+            degree: '',
+            date: '',
+            lastUpdate:'',
         };
         this.addToSimpleStorage = this.addToSimpleStorage.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -71,29 +73,33 @@ class Check extends Component {
         if(this.state.contract && this.state.accounts){
 
             const studentAddress = this.state.studentAddress;
-            const universityAddress = this.state.universityAddress;
-            this.state.contract.methods.viewDiploma(studentAddress,universityAddress).call()
+            this.state.contract.methods.viewPerson(studentAddress).call()
                 .then((result) => {
-
+                    //person.name,person.email,person.degree.degree,person.degree.date,person.lastUpdate
 
                     console.log(result);
 
                     this.setState({
-                        degree: result[0],
-                        date: result[1],
+                        person:result[0],
+                        email:result[1],
+                        degree: result[2],
+                        date: result[3],
+                        lastUpdate:result[4],
                     })
                     console.log("in the then degree:" + this.state.degree);
                     console.log("in the then date:" + this.state.date);
 
                     Info.studentAddress = this.state.studentAddress;
-                    Info.universityAddress = this.state.universityAddress;
+                    Info.person = this.state.person;
+                    Info.email = this.state.email;
                     Info.degree = this.state.degree;
                     Info.date = this.state.date;
+                    Info.lastUpdate = this.state.lastUpdate;
 
 
                 }).catch((err)=>{
-                    console.log('error');
-                    console.log(err);
+                console.log('error');
+                console.log(err);
             });
         }else {
             this.setState((prevState =>({
@@ -144,9 +150,9 @@ class Check extends Component {
                     // this.addToSimpleStorage();
                     this.viewFromplateform();
                 }}>
-                    <div className="title">Check Diploma</div>
+                    <div className="title">View Person Information</div>
                     <div className="leftpart">
-                        <div className="addText">Student Address:</div>
+                        <div className="addText">Address:</div>
                         <div className="username-field">
                             <input
                                 name="studentAddress"
@@ -155,26 +161,16 @@ class Check extends Component {
                                 onChange={this.handleChange}
                             />
                         </div>
-                        <div className="addText">University Address:</div>
-                        <div className="username-field">
-                            <input
-                                name="universityAddress"
-                                type="text"
-                                value = {this.state.universityAddress}
-                                onChange={this.handleChange}
-                            />
-                        </div>
                     </div>
                     <div className="rightpart">
-                        <input className="button" type = "submit" name="submit" value = "submit"/>
-                        <Link to="/detail" className="abutton"> Detail</Link>
+                        <input className="button" type = "submit" name="submit" value = "Submit"/>
+                        <Link to="/personDetail" className="abutton">Detail</Link>
                         <Link to="/home" className="abutton">Back</Link>
                     </div>
                 </form>
             </div>
         </React.Fragment>
-
     }
 }
 
-export default Check;
+export default SearchPerson;
