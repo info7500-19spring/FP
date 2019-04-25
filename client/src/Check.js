@@ -5,11 +5,11 @@ import React, { Component } from "react";
 
 import "./App.css";
 // import INFO from "./info";
-import userInfo from"./info";
-import { Link} from "react-router-dom";
-// import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-// import Detail from  "./Detail";
+import Info from"./info";
+// import { Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 // import Web3 from "web3";
+
 
 class Check extends Component {
     constructor(props) {
@@ -17,14 +17,13 @@ class Check extends Component {
 
         this.state = {
             storageValue: 0,
-            web3: userInfo.web3,
-            accounts: userInfo.accounts,
-            contract: userInfo.contract,
+            web3: Info.web3,
+            accounts: Info.accounts,
+            contract: Info.contract,
             studentAddress:'',
             universityAddress:'',
             degree:'',
-            date:'',
-            path:'',
+            path:'detail',
         };
         this.addToSimpleStorage = this.addToSimpleStorage.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -76,26 +75,26 @@ class Check extends Component {
             this.state.contract.methods.viewDiploma(studentAddress,universityAddress).call()
                 .then((result) => {
 
+
                     console.log(result);
 
-                    // this.setState({
-                    //     degree: result.degree,
-                    //     date: result.date,
-                    // })
-                    // console.log("in the then degree:" + this.state.degree);
-                    // console.log("in the then date:" + this.state.date);
+                    this.setState({
+                        degree: result[0],
+                        date: result[1],
+                    })
+                    console.log("in the then degree:" + this.state.degree);
+                    console.log("in the then date:" + this.state.date);
+
+                    Info.studentAddress = this.state.studentAddress;
+                    Info.universityAddress = this.state.universityAddress;
+                    Info.degree = this.state.degree;
+                    Info.date = this.state.date;
+
 
                 }).catch((err)=>{
                     console.log('error');
                     console.log(err);
             });
-
-            var data = {degree: this.state.degree, date: this.state.date};
-            data = JSON.stringify(data);
-            this.setState({
-                path:`/detail/${data}`,
-            })
-            console.log("path is:"+this.state.path);
         }else {
             this.setState((prevState =>({
                 ...prevState,
@@ -113,6 +112,22 @@ class Check extends Component {
         });
     }
 
+    // changeRouter = () => {
+    //     console.log(this.props)
+    //     // this.props.router.push('/follow');
+    //     // this.props.router.push({
+    //     //     pathname:'/follow',
+    //     //     state:{name:'xxx'},
+    //     //     query: {foo: 'bar'}
+    //     // })
+    //
+    //     // this.props.router.replace('/follow');
+    //     this.props.router.replace({
+    //         pathname: '/detail',
+    //         query: {foo:'bar'}
+    //     })
+    // }
+
 
     render() {
         // console.log("web3 is: " + this.state.web3 + " accounts is: " + this.state.accounts + "contract is: " + this.state.contract);
@@ -121,7 +136,8 @@ class Check extends Component {
             return <div>Loading Web3, accounts, and contract...</div>;
 
         }
-        return (
+
+        return <React.Fragment>
             <div id="container">
                 <form className="pure-form pure-form-stacked" onSubmit= {(e) => {
                     e.preventDefault();
@@ -129,34 +145,35 @@ class Check extends Component {
                     this.viewFromplateform();
                 }}>
                     <div className="title">Check Diploma</div>
-                    <div className="addText">Student Address:</div>
-                    <div className="username-field">
-                        <input
-                            name="studentAddress"
-                            type="text"
-                            value={this.state.studentAddress}
-                            onChange={this.handleChange}
-                        />
+                    <div className="leftpart">
+                        <div className="addText">Student Address:</div>
+                        <div className="username-field">
+                            <input
+                                name="studentAddress"
+                                type="text"
+                                value={this.state.studentAddress}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        <div className="addText">University Address:</div>
+                        <div className="username-field">
+                            <input
+                                name="universityAddress"
+                                type="text"
+                                value = {this.state.universityAddress}
+                                onChange={this.handleChange}
+                            />
+                        </div>
                     </div>
-                    <div className="addText1">University Address:</div>
-                    <div className="username-field1">
-                        <input
-                            name="universityAddress"
-                            type="text"
-                            value = {this.state.universityAddress}
-                            onChange={this.handleChange}
-                        />
+                    <div className="rightpart">
+                        <input className="button" type = "submit" name="submit" value = "submit"/>
+                        <Link to="/detail" className="abutton"> Detail</Link>
+                        <Link to="/home" className="abutton">Back</Link>
                     </div>
-                    <input type = "submit" name="submit" value = "submit"/>
                 </form>
-                {/*<Router>*/}
-                {/*    <link to = {this.state.path}>Check</link>*/}
-                {/*    <Route path='/detail/:data' component={Detail} />*/}
-                {/*</Router>*/}
-
-                <div><Link to="/home">Back</Link></div>
             </div>
-        );
+        </React.Fragment>
+
     }
 }
 

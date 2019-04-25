@@ -1,7 +1,4 @@
 var SimpleStorage = artifacts.require("./SimpleStorage.sol");
-var DiplomaViewer = artifacts.require("./DiplomaViewer.sol");
-var Institution = artifacts.require("./Institution.sol");
-var Person = artifacts.require("./Person.sol");
 var PlatForm = artifacts.require("./Platform.sol");
 
 module.exports = function(deployer) {

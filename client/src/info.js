@@ -1,6 +1,14 @@
-let userInfo = {
+let Info = {
     web3: null,
     accounts: null,
-    contract: null
+    contract: null,
+    studentAddress:null,
+    universityAddress:null,
+    degree:null,
+    date:null,
+    person:'',
+    email:'',
+    lastUpdate:'',
 }
-export default userInfo;
+export default Info;
+
