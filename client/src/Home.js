@@ -89,19 +89,27 @@ class Home extends Component {
         return (
             <div id="container">
                 <div className="welcome">
-                    <div className="welcome-user">Smart Contract Example</div>
-                    <div className="welcome-text">Your Truffle Box is installed and ready.
-                        If your contracts compiled and migrated successfully, below will show a stored value of 5 (by default).
-                        Try changing the value stored on <strong>line 40</strong> of App.js.
-                        The stored value is: {this.state.storageValue}
-                        Interactive Dapp Example.
-                        You should be able to use this form to interact with the storage smart contract.
+                    <div className="welcome-user">Credential Evaluation Center</div>
+                    <div className="welcome-text">
+                        <p>
+                            Welcome!!!
+                        </p>
+                        <p>
+                            {this.state.accounts[0]}
+                        </p>
+                        <p>
+                        We can complete your evaluation in seconds after we receive and approve all your documents.
+                        </p>
+                        <p>
+                        We have provided more than 1.5 million evaluations to international students and professionals.
+                        </p>
+
                     </div>
                     <div className="buttonarea">
                         <ul className="home"><Link to="/addDiploma">Add Diploma</Link></ul>
-                        <ul className="home"><Link to="/Check">Check</Link></ul>
-                        <ul className="home"><Link to="/addPerson">Add Person</Link></ul>
-                        <ul className="home"><Link to="/person">View Person</Link></ul>
+                        <ul className="home"><Link to="/Check">Check Diploma</Link></ul>
+                        <ul className="home"><Link to="/addPerson">Update Profile</Link></ul>
+                        <ul className="home"><Link to="/person">View Profile</Link></ul>
                     </div>
                     {/*<div className="home">*/}
                     {/*    <ul><Link to="/Check">Check</Link></ul>*/}
